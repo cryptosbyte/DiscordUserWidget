@@ -45,9 +45,9 @@ class MainClient {
           stream.on("open", async () => {
             response.set("Content-Type", "image/png");
             stream.pipe(response);
-
-            await exec("rm -rf tmp/*");
           });
+
+          stream.on("close", async () => exec("rm -rf tmp/*"))
         } catch {
           return response.json({
             success: false,
