@@ -29,11 +29,11 @@ class MainClient {
       if (request.params.id && parseInt(request.params.id)) {
         try {
           const member = await this.client.guilds.cache
-            .get(process.env.SERVERID)
+            .get("896476755995541564")
             .members.fetch(request.params.id);
 
           await ImageResponse({
-            url: `https://cdn.discordapp.com/avatars/${member.user.id}/${member.user.avatar}.png?size=48`,
+            url: `${member.user.avatarURL()}?size=48`,
             data: member.user.id,
             username: member.user.username,
             discriminator: `#${member.user.discriminator}`,
@@ -72,8 +72,8 @@ class MainClient {
 
   init = () => {
     this.client.login(process.env.TOKEN);
-    app.listen(process.env.PORT || 8080, () =>
-      console.log("[Server] Dancing on Port %s", process.env.PORT || 8080)
+    app.listen(process.env.PORT || 4000, () =>
+      console.log("[Server] Dancing on Port %s", process.env.PORT || 4000)
     );
   };
 }
