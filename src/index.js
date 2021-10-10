@@ -47,7 +47,7 @@ class MainClient {
             stream.pipe(response);
           });
 
-          stream.on("close", async () => exec("rm -rf tmp/*"))
+          // stream.on("close", async () => exec("rm -rf tmp/*"))
         } catch {
           return response.json({
             success: false,
