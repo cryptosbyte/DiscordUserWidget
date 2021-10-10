@@ -31,11 +31,9 @@ class MainClient {
           const member = await this.client.guilds.cache
             .get("896476755995541564")
             .members.fetch(request.params.id);
-
-            console.log(member.displayAvatarURL())
-            console.log(member.user.avatarURL())
-          await ImageResponse({
-            url: `${member.avatarURL()}?size=48`,
+member
+          await se({
+            url: `${member.displayAvatarURL()}?size=48`,
             data: member.user.id,
             username: member.user.username,
             discriminator: `#${member.user.discriminator}`,
