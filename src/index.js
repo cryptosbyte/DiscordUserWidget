@@ -31,7 +31,7 @@ class MainClient {
           const member = await this.client.guilds.cache
             .get("896476755995541564")
             .members.fetch(request.params.id);
-member
+
           await se({
             url: `${member.displayAvatarURL()}?size=48`,
             data: member.user.id,
