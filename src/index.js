@@ -32,7 +32,7 @@ class MainClient {
             .get("896476755995541564")
             .members.fetch(request.params.id);
 
-          await se({
+          await ImageResponse({
             url: `${member.displayAvatarURL()}?size=48`,
             data: member.user.id,
             username: member.user.username,
