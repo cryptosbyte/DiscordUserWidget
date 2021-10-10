@@ -1,0 +1,29 @@
+{
+  "name": "discorduserwidget",
+  "description": "A widget of a Discord user's information.",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "mkdir -p tmp && node src/index.js",
+    "dev": "nodemon src/index.js",
+    "clean": "rm -rf tmp && mkdir -p tmp"
+  },
+  "dependencies": {
+    "axios": "^0.22.0",
+    "deta": "^1.0.1",
+    "discord.js": "^13.2.0",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "sharp": "^0.29.1"
+  },
+  "devDependencies": {
+    "@types/node": "^16.10.3"
+  },
+  "engines": {
+    "node": "16.x",
+    "npm": "7.x"
+  },
+  "keywords": [],
+  "author": "CryptosByte",
+  "license": "ISC"
+}
