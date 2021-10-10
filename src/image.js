@@ -11,6 +11,7 @@ module.exports = async (data) => {
         })
       ).data
     )
+      .resize(48, 48)
       .composite([
         {
           input: Buffer.from(
